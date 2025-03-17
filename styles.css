@@ -24,27 +24,52 @@
 
 /*seccio principal*/
 .hero {
-  background: linear-gradient(135deg, #f5f6f7 0%, #e9ecef 100%);
-  min-height: 100vh;
+  min-height: 450px;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
 }
 
 /*Estils generals*/
 section {
   display: flex;
   flex-direction: column;
-  /*alineat en columnes del contingut*/
   justify-content: center;
-  /*centrat verticalment*/
   align-items: center;
-  /*centrat horitzontalment*/
+  padding: 40px 0;
+  text-align: center;
 }
 
+.hero {
+  background: linear-gradient(135deg, #90caf9 0%, #42a5f5 100%);
+  min-height: 450px;
+}
+
+.about-me {
+  background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
+  height: 500px;
+  padding: 40px;
+  color: #333;
+}
+
+.experience {
+  background: linear-gradient(135deg, #bbdefb 0%, #64b5f6 100%);
+  padding: 60px 40px;
+  color: white;
+}
+
+.projectes {
+  background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
+  padding: 60px 0;
+  color: #333;
+}
+
+footer {
+  background: linear-gradient(135deg, #64b5f6 0%, #2196f3 100%);
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 a {
   font-family: Sigmar;
 }
@@ -59,9 +84,11 @@ h1 {
   width: 220px;
   height: 220px;
   margin: 20px;
-  border: 4px solid #1b1b32;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
+  border: 4px solid #3498db;
+  box-shadow: 0 12px 24px rgba(52, 152, 219, 0.3);
+  transition: all 0.4s ease;
+  object-fit: cover;
+  border-radius: 15px;
 }
 
 .hero-imatge-developer:hover {
@@ -71,9 +98,9 @@ h1 {
 .hero h2 {
   font-family: Sigmar;
   font-size: 2.3vw;
-  /*mida de la font relativa a la pantalla*/
-  color: #615151;
-  /*color del text*/
+  color: #6c757d;
+  margin-top: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .hero-inferior img {
@@ -82,8 +109,7 @@ h1 {
 
 .dark-section {
   color: white;
-  background: linear-gradient(160deg, #1b1b32 0%, #0a0a23 100%);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  background-color: #333333;
 }
 
 
@@ -92,10 +118,16 @@ h1 {
   padding: 10px;
 }
 
+.about-me:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
 
 .about-me div {
-  max-width: 600px;
+  max-width: 800px;
   text-align: center;
+  color: black;
 }
 
 /*Estils generals*/
@@ -149,9 +181,14 @@ h1 {
     font-size: 11px; padding: 6px 12px;
  }
 }
-.white-section{
-  color:black;  
-  background-color: white; /*color de fons de la secció clara*/
+.white-section {
+  color: black;
+  background-color: white;
+}
+
+.white-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
 }
 
 .experiencia-title{
@@ -161,13 +198,19 @@ h1 {
 }
 
 
-.experience i{
-  font-size:clamp(14px,2vw,50px); /*defineix el tamany mínim, màxim i òptim de la font*/    
-  color: #7ade30;
-  background-color:#0a0a23 ;
-  padding:8px 19px;
+.experience i {
+  font-size: clamp(14px, 2vw, 50px);
+  color: #3498db;
+  background-color: rgba(52, 152, 219, 0.1);
+  padding: 16px;
   border-radius: 50%;
+  transition: all 0.3s ease;
+  border: 2px solid #3498db;
+}
 
+.experience i:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
 }
 
 
@@ -190,16 +233,26 @@ h1 {
   margin: 5px,
 }
 
-.experience .columna{
-  margin-bottom: 10px;
-  padding: 20px;
-  border: 2px solid #8080804d;
+.experience .columna {
+  margin-bottom: 20px;
+  padding: 30px;
+  border: 2px solid rgba(52, 152, 219, 0.4);
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  background: white;
+  color: black;
+}
+
+.experience .columna:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(52, 152, 219, 0.1);
+  border-color: #3498db;
 }
 
 .experience .columna:hover{
-  color:white;
-  background-color: #1b1b32;
-  border: 2px solid #7ade30;
+  color: black;
+  background-color: #f8f9fa;
+  border: 2px solid #3498db;
 }
 .experience .columna{
   margin-bottom: 10px;
@@ -222,23 +275,102 @@ h1 {
 /*projectes*/
 .section-description{
   font-size:clamp(14px,2vw,50px); /*defineix el tamany mínim, màxim i òptim de la font*/    
-  color: #584343;
+  color: #6c757d;
 }
 
 /*projectes-------------------------------------------------------*/
 .projectes {
-  padding: 40px;
+  padding: 50px 0;
+  text-align: center;
+  width: 100%;
 }
 
+.section-title {
+  margin: 0 auto 20px;
+  text-align: center;
+}
 
-.projectes img{
-  height: 100%;
-  width: 100%;
-  margin: 10px;
-  box-shadow: 0px 11px 50px rgba(43, 43, 43, 0.5);
-  transition: all 0.3s ease;
+.section-description {
+  margin: 0 auto 40px;
+  text-align: center;
+  max-width: 800px;
+}
+
+.projectes-container {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  padding: 15px;
+  gap: 30px;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  scrollbar-color: #3498db transparent;
+}
+
+.projectes-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.projectes-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.projectes-container::-webkit-scrollbar-thumb {
+  background-color: #3498db;
+  border-radius: 4px;
+}
+
+.projectes-container::-webkit-scrollbar-thumb:hover {
+  background-color: #2980b9;
+}
+
+.projecte {
+  flex: 0 0 auto;
+  width: calc(100% - 30px);
+  max-width: 500px;
+  scroll-snap-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .projecte {
+    width: calc(100% - 20px);
+    margin: 10px;
+    padding: 12px;
+  }
+
+  .projecte h2 {
+    font-size: clamp(16px, 4vw, 24px);
+  }
+
+  .projecte p {
+    font-size: clamp(12px, 3vw, 18px);
+  }
+
+  .overlay p {
+    font-size: 18px;
+  }
+
+  .icones-contenidor i {
+    font-size: 20px;
+  }
+}
+.projecte:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(52, 152, 219, 0.2);
+}
+
+.projecte img {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: block;
+  border-radius: 10px;
+  transition: all 0.3s ease;
 }
 
 
@@ -248,21 +380,40 @@ h1 {
 }
 
 
-.overlay{
-  transition: all 0.3s ease;
-  opacity: 0;  /*transparència de la capa NO ES VEU*/
+.overlay {
   position: absolute;
-  top:50%;  /*al centre vertical */
-  left: 50%;   /* al centre horitzontal */
-  transform: translate(-50%, -50%);  
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.4s ease;
+  background: linear-gradient(135deg, rgba(44, 62, 80, 0.9) 0%, rgba(52, 152, 219, 0.9) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+
+ .overlay p {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
   text-align: center;
- }
+  margin-bottom: 15px;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.3s ease 0.1s;
+}
 
-
- .overlay p{
-  font-size:clamp(14px,2.5vw,30px); /*defineix el tamany mínim, màxim i òptim de la font*/    
-  margin-bottom: 0;
- }
+.projecte:hover .overlay p {
+  transform: translateY(0);
+  opacity: 1;
+}
 
 
 .projecte {
@@ -270,15 +421,29 @@ h1 {
 }
 
 
-.projecte:hover img {
-  transform: scale(1.05);
-  opacity: 0.2;
-  
-}
-
-
 .projecte:hover .overlay {
   opacity: 1;
+}
+
+.projecte:hover img {
+  transform: scale(1.05);
+}
+
+.icones-contenidor {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.icones-contenidor i {
+  color: white;
+  font-size: 24px;
+  transition: all 0.3s ease;
+}
+
+.icones-contenidor i:hover {
+  transform: scale(1.2);
+  color: #3498db;
 }
 
 
@@ -326,9 +491,70 @@ footer {
   min-height: 500px;
 }
 
-
 .footer-logo {
+  width: 80px;
   height: 80px;
+  margin: 20px;
+  border-radius: 50%;
+  border: 3px solid #3498db;
+  transition: all 0.3s ease;
+  object-fit: cover;
+}
+
+.footer-logo:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(52, 152, 219, 0.4);
+}
+
+.footer-text {
+  font-size: 2rem;
+  padding: 20px;
+  margin-bottom: 30px;
+  font-family: Sigmar;
+  color: #64B5F6;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.social-icons {
+  margin: 20px 0;
+}
+
+.social-icons a {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+  border-radius: 50%;
+  background: rgba(52, 152, 219, 0.1);
+  border: 2px solid #3498db;
+  transition: all 0.3s ease;
+}
+
+.social-icons i {
+  color: white;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: translateY(-5px);
+  background: #3498db;
+  box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+}
+
+.social-icons a:hover i {
+  transform: scale(1.2);
+}
+
+.drets {
+  font-size: 15px;
+  padding: 20px;
+  font-family: Sigmar;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 1px;
+}
   width: 80px;
   margin: 10px;
 }
